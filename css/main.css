@@ -231,7 +231,7 @@ p {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 0px;
-  padding: 5px;
+  padding: 1px;
 }
 .tab__links-list--lgrey {
   width: 100%;
@@ -264,7 +264,8 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   color: #ff0000;
-  padding: 0 5px;
+  padding: 0 3px;
+  font-size: 1rem;
 }
 .link::before {
   -webkit-transform: scaleX(0);
@@ -287,10 +288,16 @@ p {
   bottom: 0;
   left: 0;
   inset: 0 0 0 0;
-  background: hsl(200, 100%, 80%);
+  background: rgba(0, 0, 0, 0.12);
   z-index: -1;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #151515;
+  font-weight: 300;
 }/*# sourceMappingURL=main.css.map */

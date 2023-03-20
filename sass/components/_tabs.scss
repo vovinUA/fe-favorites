@@ -100,7 +100,7 @@ $tab-wrap-border-radius: 6px;
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 0px;
-    padding: 5px;
+    padding: 1px;
 
     &--lgrey {
       width: 100%;
@@ -135,7 +135,8 @@ $tab-wrap-border-radius: 6px;
   text-decoration: none;
   text-transform: uppercase;
   color: #ff0000;
-  padding: 0 5px;
+  padding: 0 3px;
+  font-size: 1rem;
 
   &::before {
   transform: scaleX(0);
@@ -151,8 +152,13 @@ $tab-wrap-border-radius: 6px;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
-  background: hsl(200 100% 80%);
+  background: rgba(0, 0, 0, 0.12);
   z-index: -1;
   transition: transform .3s ease;
   }
+}
+.desc {
+  font-size: 1rem;
+  color:#151515;
+  font-weight: 300;
 }

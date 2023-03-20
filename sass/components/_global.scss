@@ -1,0 +1,45 @@
+body {
+    font-family: Alumni Sans;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    background-color: #e7e7e7;
+    color: #777;
+    padding: 20px 0;
+    font-weight: 300;
+  }
+  
+  .container {
+    margin: 0 auto;
+    > *:not(.tab-wrap) {
+      padding: 0 80px;
+    }
+  }
+  
+  h1,
+  h2 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: 0px;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }

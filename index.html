@@ -4,21 +4,45 @@
   <meta charset="utf-8" />
   <title>My FrontEnd Bookmarks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500;700;800&family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;800&family=Oswald:wght@200;300;400;500;700&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+  <link href="./css/fontawesome.css" rel="stylesheet">
+  <link href="./css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
- <h1>My FrontEnd Bookmarks</h1>
-<!--<h2>Transitioning Between Variable Heights</h2> -->
+  <header class="header">
+    <div>
+      <div class="theme-toggler">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <span class="ball"></span>
+        </label>
+      </div>
+    </div>
+    <div><h1>My FrontEnd Bookmarks</h1></div>
+    <div>
+      <div class="zoom-links">
+        <button id="decrease-btn" class="zoom-btn">
+          <svg width="16" height="16">
+            <use href="./img/icons.svg#icon-links-zoom-minus"></use>
+          </svg>
+        </button>
+        <span id="font-size-value" class="font-size-value">100%</span>
+        <button id="increase-btn" class="zoom-btn">
+          <svg width="16" height="16">
+            <use href="./img/icons.svg#icon-links-zoom-plus"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
 <div class="container">
-
-  <!-- <div class="demo-section">
-    <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-  </div> -->
 
   <div class="tab-wrap">
 
@@ -57,6 +81,46 @@
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://ishadeed.com/article/custom-scrollbars-css/" class="link" target="_blank">Custom Scrollbars In CSS</a>
               <span class="desc">All aspects of creating custom scrollbar article</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
             </li>
           </ul>
         </div>
@@ -288,13 +352,17 @@
         <div class="tab__links-list--50">
           <h3>React.JS</h3>
           <ul class="tab__links-list">
-            <li class="tab__links-item tab__links-item--lgrey">
-              <a href="https://mui.com/" class="link" target="_blank">MUI</a>
-              <span class="desc">intuitive React UI tools</span>
-            </li>
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://react.dev/" class="link" target="_blank">React.dev</a>
               <span class="desc">Latest React documentation</span>
+            </li>
+            <li class="tab__links-item tab__links-item--lgrey">
+              <a href="" class="link" target="_blank">MUI</a>
+              <span class="desc">intuitive React UI tools</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://www.npmjs.com/package/react-toastify" class="link" target="_blank">React-Toastify</a>
+              <span class="desc">Add notifications to your app with ease</span>
             </li>
           </ul>
         </div>
@@ -424,6 +492,8 @@
   </div>
 
   </div>
+  <script src="./js/zoom-links.js"></script>
+  <script src="./js/theme.js"></script>
 </body>
 
 </html>

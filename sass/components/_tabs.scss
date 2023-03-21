@@ -1,5 +1,3 @@
-$max-tab-count: 5;
-$tab-wrap-border-radius: 6px;
 .tab-wrap {
   transition: 0.3s box-shadow ease;
   border-radius: $tab-wrap-border-radius;
@@ -8,11 +6,11 @@ $tab-wrap-border-radius: 6px;
   flex-wrap: wrap;
   position: relative;
   list-style: none;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
   margin: 0 auto;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   &:hover {
-    box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.19);
   }
 }
 
@@ -41,24 +39,23 @@ $tab-wrap-border-radius: 6px;
     border-bottom-left-radius: 0;
   }
   &:checked + label {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 -1px 0 #fff inset;
     cursor: default;
     &:hover {
       box-shadow: 0 -1px 0 #fff inset;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.75);
     }
   }
   + label {
-    box-shadow: 0 -1px 0 #eee inset;
+    // box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5) inset;
     border-radius: $tab-wrap-border-radius $tab-wrap-border-radius 0 0;
     cursor: pointer;
     display: block;
     text-decoration: none;
-    color: #333;
     flex-grow: 3;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.05);
     user-select: none;
     text-align: center;
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
@@ -66,17 +63,19 @@ $tab-wrap-border-radius: 6px;
     box-sizing: border-box;
     padding: 15px;
     &:hover {
-      background-color: #f9f9f9;
-      box-shadow: 0 1px 0 #f4f4f4 inset;
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     }
   }
   &__label {
-    font-family: Jost, sans-serif;
-    font-weight: 400;
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
     line-height: 1;
+    color: #000;
+    opacity: 0.75;
   }
   &__content {
-    font-family: Alumni Sans, sans-serif;
+    font-family: Jost, sans-serif;
     padding: 10px 25px;
     background-color: transparent;
     position: absolute;
@@ -94,15 +93,29 @@ $tab-wrap-border-radius: 6px;
     justify-content: space-between;
   }
   &__links-list {
-    // outline: 2px solid red;
+    // outline: 1px solid red;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
+    height: calc(100vh - 200px);
+    overflow-y: auto;
     margin: 0px;
     padding: 2px;
-    line-height: 1rem;
-
+    line-height: 1.1rem;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ccc; 
+      border-radius: 0px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #bbb; 
+    }
     &--lgrey {
       width: 100%;
       display: inline-block;
@@ -128,16 +141,17 @@ $tab-wrap-border-radius: 6px;
     margin: 0px;
     padding: 5px;
     font-size: 1.2em;
+    line-height: 1;
   }
 }
 
 .link {
+  font-family: Oswald, sans-serif;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ff0000;
-  padding: 0 3px;
-  font-size: 1rem;
+  color: $accentColor;
+  padding: 0 5px;
 
   &::before {
   transform: scaleX(0);
@@ -153,13 +167,12 @@ $tab-wrap-border-radius: 6px;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.15);
   z-index: -1;
   transition: transform .3s ease;
   }
 }
 .desc {
-  font-size: 1rem;
-  color:#151515;
+  color: rgba(0, 0, 0, 0.75);
   font-weight: 300;
 }

@@ -1,31 +1,38 @@
 body {
-    font-family: Alumni Sans;
+    font-family: Jost, sans-serif;
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
     background-color: #e7e7e7;
-    color: #777;
+    color: #111;
     padding: 20px 0;
     font-weight: 300;
+    &.dark {
+      background-color: #333;
+    }
   }
+
+  body.dark h1, body.dark .desc {color: rgba(255,255,255,0.75);} body.dark .tab-wrap {background-color: rgba(255,255,255,0.25);}
+  body.dark .zoom-btn svg {fill: rgba(255,255,255,0.75);} body.dark .font-size-value {color: rgba(255,255,255,0.75);}
+  body.dark .tab:checked + label {background-color: rgba(255, 255, 255, 0.05);}
   
   .container {
     margin: 0 auto;
     > *:not(.tab-wrap) {
-      padding: 0 80px;
+      padding: 0 40px;
     }
   }
   
-  h1,
-  h2 {
+  h1 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 10px;
-    color: #444;
+    color: #000;
     text-align: center;
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1.8em;
+    opacity: 0.75;
   }
   
   h2 {
@@ -34,12 +41,26 @@ body {
   }
   
   h3 {
-    font-size: 1.25em;
+    font-family: Oswald, sans-serif;
+    font-size: 1.2em;
     font-weight: 500;
     margin: 0px;
+    margin-bottom: 10px;
+    opacity: 0.75;
+    color: #000;
   }
   
   p {
     line-height: 1.6;
     margin-bottom: 20px;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
   }

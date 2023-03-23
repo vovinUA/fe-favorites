@@ -14,40 +14,45 @@
 
 <body>
   <header class="header">
-    <div>
-      <div class="theme-toggler">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="checkbox-label">
-          <i class="fa-solid fa-sun"></i>
-          <i class="fa-solid fa-moon"></i>
-          <span class="ball"></span>
-        </label>
-      </div>
-    </div>
-    <div><h1>My FrontEnd Bookmarks</h1></div>
-    <div>
-      <div class="zoom-links">
-        <button id="decrease-btn" class="zoom-btn">
-          <svg width="16" height="16">
-            <use href="./img/icons.svg#icon-links-zoom-minus"></use>
-          </svg>
-        </button>
-        <span id="font-size-value" class="font-size-value">100%</span>
-        <button id="increase-btn" class="zoom-btn">
-          <svg width="16" height="16">
-            <use href="./img/icons.svg#icon-links-zoom-plus"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <h1>My FrontEnd Bookmarks</h1>
   </header>
+  <div id="draggable" draggable="true" class="page-controls glass-background" title="Drag and drop page controls">
+  <!-- <div class="page-controls"> -->
+    <!-- Dark/Light themes toggler -->
+    <div class="theme-toggler" title="Switch Light/Dark Themes">
+      <input type="checkbox" class="checkbox" id="checkbox">
+      <label for="checkbox" class="checkbox-label">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+        <span class="ball"></span>
+      </label>
+    </div>
+     <!-- Zoom in/out links font size-->
+     <div class="zoom-links" title="Zoom in/out links text size">
+      <button id="decrease-btn" class="zoom-btn">
+        <svg width="16" height="16">
+          <use href="./img/icons.svg#icon-links-zoom-minus"></use>
+        </svg>
+      </button>
+      <span id="font-size-value" class="font-size-value">100%</span>
+      <button id="increase-btn" class="zoom-btn">
+        <svg width="16" height="16">
+          <use href="./img/icons.svg#icon-links-zoom-plus"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- Animations on/off -->
+    <!-- <div>
+      <button id="animation-toggler">Toggle Animations</button>
+    </div> -->
+  </div>
 
 <div class="container">
 
   <div class="tab-wrap">
 
     <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
-    <label for="tab4" class="tab__label">CSS</label>
+    <label for="tab4" class="tab__label">HTML/CSS</label>
 
     <input type="radio" id="tab5" name="tabGroup2" class="tab">
     <label for="tab5" class="tab__label">UI Motion</label>
@@ -64,8 +69,24 @@
     <div class="tab__content">
       <div class="tab__links-wrapper">
         <div class="tab__links-list--50">
-          <h3>CSS Tricks</h3>
+          <h3>html/CSS/Git Handbooks</h3>
           <ul class="tab__links-list">
+            <li class="tab__links-item">
+              <a href="https://coursehunter.net/course/git-polnyy-kurs-dlya-nachinayushchih-i-ne-tolko" class="link" target="_blank">Git: Полный курс</a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://gitsheet.wtf/" class="link" target="_blank">GitSheet</a>
+              <span class="desc">A dead simple git cheatsheet.</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://htmlreference.io/" class="link" target="_blank">HTMLReference.io</a>
+              <span class="desc">A free guide to HTML features all elements and attributes.</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://cssreference.io/" class="link" target="_blank">CSSReference.io</a>
+              <span class="desc">Visual guide to CSS features properties and explains them with illustrated and animated examples</span>
+            </li>
             <li class="tab__links-item tab__links-item--lgrey">
               <a href="https://joshcollinsworth.com/demos/easing" class="link" target="_blank">CSS easing playground</a>
               <span class="desc">Visuzal cubic-bezier sandbox and generator</span>
@@ -83,8 +104,8 @@
               <span class="desc">All aspects of creating custom scrollbar article</span>
             </li>
             <li class="tab__links-item">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
+              <a href="http://thenewcode.com/1119/Pointer-Sisters-Changing-The-Browsers-Cursor-with-CSS" class="link" target="_blank">Browser's Cursor</a>
+              <span class="desc">Changing The Browser’s Cursor with CSS</span>
             </li>
             <li class="tab__links-item">
               <a href="" class="link" target="_blank"></a>
@@ -151,7 +172,6 @@
               <a href="" class="link" target="_blank"></a>
               <span class="desc"></span>
             </li>
-            
           </ul>
         </div>
       </div>
@@ -160,7 +180,36 @@
     <div class="tab__content">
       <div class="tab__links-wrapper">
         <div class="tab__links-list--50">
-          <h3>MoDiz Inspiration</h3>
+          <h3>onScroll Animation</h3>
+          <ul class="tab__links-list">
+            <li class="tab__links-item">
+              <a href="https://coolcssanimation.com/" class="link" target="_blank">Cool CSS Animation</a>
+              <span class="desc">Discover animation by learning to code cool, abstract effects with CSS.</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="http://scrollmagic.io/" class="link" target="_blank">ScrollMagic.io</a>
+              <span class="desc">JS library for magical scroll interactions</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://cssanimation.rocks/" class="link" target="_blank">cssanimation.rocks</a>
+              <span class="desc">CSS animation articles, tips and tutorials</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://plainenglish.io/blog/8-on-scroll-animation-javascript-libraries-you-can-consider-df458f80a873" class="link" target="_blank">8 onScroll Animation JS libs</a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://michalsnik.github.io/aos/" class="link" target="_blank">AOS</a>
+              <span class="desc">Animate On Scroll Library JS lib</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="tab__links-list--50">
+          <h3>UI/UX/MoDiz Inspiration</h3>
           <ul class="tab__links-list">
             <li class="tab__links-item">
               <a href="https://www.tcl.com/hk/en/tvs/c835" class="link" target="_blank">TCL C835 Series</a>
@@ -174,23 +223,14 @@
               <a href="https://tympanus.net/Tutorials/OriginalHoverEffects/index.html" class="link" target="_blank">Original Hover Effects</a>
               <span class="desc">Pics galley onHover animation 10 demos</span>
             </li>
-            <li class="tab__links-item tab__links-item--dgrey">
-              <a href="" class="link" target="_blank"></a>
+            <li class="tab__links-item">
+              <a href="https://creattie.com/blog/add-json-animations-to-html" class="link" target="_blank">JSON Animations</a>
+              <span class="desc">How to Add JSON Animations to HTML</span>
+            </li>
+            <li class="tab__links-item">
+              <a href="https://css-tricks.com/animating-with-lottie/" class="link" target="_blank">Animating with Lottie</a>
               <span class="desc"></span>
             </li>
-            <li class="tab__links-item tab__links-item--dgrey">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
-            </li>
-            <li class="tab__links-item tab__links-item--dgrey">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
-            </li>
-          </ul>
-        </div>
-        <div class="tab__links-list--50">
-          <h3>UI/UX Inspiration</h3>
-          <ul class="tab__links-list">
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://www.parisoptimalplanning.com/" class="link" target="_blank">Paris Transport Planner</a>
               <span class="desc">Hero letters anim, nav, fullPage onScroll layout</span>
@@ -198,14 +238,6 @@
             <li class="tab__links-item">
               <a href="https://tympanus.net/Development/GridMenu/" class="link" target="_blank">Expanding Grid Menu</a>
               <span class="desc">CSS Grid powered menu with a box look. <a href="https://tympanus.net/codrops/2018/03/28/grid-menu/" class="link" target="_blank">Article</a> | <a href="https://tympanus.net/codrops/2018/03/28/grid-menu/" class="link" target="_blank">GitHub</a></span>
-            </li>
-            <li class="tab__links-item">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
-            </li>
-            <li class="tab__links-item">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
             </li>
             <li class="tab__links-item">
               <a href="" class="link" target="_blank"></a>
@@ -247,15 +279,15 @@
             </li>
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://marcbruederlin.github.io/particles.js/" class="link" target="_blank">Particles.js</a>
-              <span class="desc">JS animation library with a simple API. Works with CSS properties, SVG, DOM attrs and JS Objs.</span>
+              <span class="desc">Hi-Tec particles animation FX</span>
             </li>
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://animejs.com/" class="link" target="_blank">Anime.js</a>
-              <span class="desc">Hi-Tec particles animation FX</span>
+              <span class="desc">JS animation lib with a simple API. Works with CSS props, SVG, DOM attrs and JS Objs</span>
             </li>
             <li class="tab__links-item">
               <a href="https://alvarotrigo.com/fullPage/" class="link" target="_blank">fullPage.js</a>
-              <span class="desc">Create Beautiful Fullscreen Scrolling Websites (<a href="https://themify.org/fullpane/home/demo-2/#Video" class="link" target="_blank">WPtemplate</a>)</span>
+              <span class="desc">Create Beautiful Fullscreen Scrolling Websites (<a href="https://themify.org/fullpane/home/demo-2/#Video" class="link" target="_blank">WP template</a>)</span>
             </li>
             <li class="tab__links-item">
               <a href="https://imagesloaded.desandro.com/" class="link" target="_blank">imagesLoaded</a>
@@ -374,8 +406,8 @@
               <span class="desc">Article to read</span>
             </li>
             <li class="tab__links-item">
-              <a href="" class="link" target="_blank"></a>
-              <span class="desc"></span>
+              <a href="https://www.youtube.com/watch?v=zDlg64fsQow" class="link" target="_blank">Event Loop от А до Я</a>
+              <span class="desc">Архитектура браузера и Node JS. Движки и рендер.</span>
             </li>
             <li class="tab__links-item">
               <a href="" class="link" target="_blank"></a>
@@ -406,6 +438,10 @@
             <li class="tab__links-item tab__links-item--dgrey">
               <a href="https://letsenhance.io/" class="link" target="_blank">Let'sEnhance</a>
               <span class="desc">AI editor to increase image resolution without losing quality</span>
+            </li>
+            <li class="tab__links-item tab__links-item--dgrey">
+              <a href="https://github.com/features/preview/copilot-x" class="link" target="_blank">GitHub Copilot X</a>
+              <span class="desc">Your AI pair programmer is leveling up</span>
             </li>
             <li class="tab__links-item">
               <a href="https://namelix.com/" class="link" target="_blank">Namelix</a>
@@ -484,6 +520,18 @@
               <a href="" class="link" target="_blank"></a>
               <span class="desc"></span>
             </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
+            <li class="tab__links-item">
+              <a href="" class="link" target="_blank"></a>
+              <span class="desc"></span>
+            </li>
           </ul>
         </div>
       </div>
@@ -492,8 +540,10 @@
   </div>
 
   </div>
-  <script src="./js/zoom-links.js"></script>
-  <script src="./js/theme.js"></script>
+  <script src="./js/page-controls.js" type="module"></script>
+  <!-- <script src="./js/anim-toggler.js" type="module"></script> -->
+  <script src="./js/zoom-links.js" type="module"></script>
+  <script src="./js/theme.js" type="module"></script>
 </body>
 
 </html>

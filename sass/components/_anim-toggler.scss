@@ -1,0 +1,7 @@
+/* Disable animations when prefers-reduced-motion is enabled */
+@media (prefers-reduced-motion: reduce) {
+    body.reduce-motion * {
+      animation-play-state: paused !important;
+      transition: none !important;
+    }
+  }

@@ -1,0 +1,33 @@
+body.dark {
+    color: rgba(255, 255, 255, 0.75);
+    transition: background-color 1s ease;
+  }
+body.dark h1 {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 1s ease;
+}
+body.dark .desc {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 1s ease;
+}
+body.dark .tab-wrap {
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 1s ease;
+}
+body.dark .zoom-btn {
+  fill: rgba(255, 255, 255, 0.75);
+  transition: fill 1s ease;
+}
+body.dark .zoom-label {
+    fill: rgba(255, 255, 255, 0.75);
+    transition: fill 1s ease;
+  }
+body.dark .tab:checked + label {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 1s ease;
+}
+body.dark .page-controls {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 1s ease;
+}
+

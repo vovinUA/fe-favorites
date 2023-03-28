@@ -20,7 +20,7 @@
     overflow: hidden;
   }
   
-  .page-controls:before {
+  .page-controls::before {
     content: '';
     display: block;
     position: absolute;
